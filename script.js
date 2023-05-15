@@ -13,7 +13,7 @@ setTimeout(() => {
 
     // Capturo el tiempo a contar
     let tiempo = parseInt(txtTiempo.value);
-    const tiempoParada=tiempo*1000;
+    const tiempoParada=(tiempo)*1000;
 
     conteoDescendente(tiempo, tiempoParada)
   };
