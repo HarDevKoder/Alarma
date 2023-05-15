@@ -61,4 +61,4 @@ setTimeout(() => {
   // Acciones al Presionar Boton
   btnActivar.addEventListener('click', presionarBoton);
 
-}, 10);
+}, 1000);
