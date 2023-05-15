@@ -34,17 +34,23 @@ setTimeout(() => {
   // *************************************************
   const conteoDescendente = (tiempo, tiempoParada) => {
     // Conteo Descendente (flag de detencion en variable)
-    let detenerConteo = setInterval(() => {
-      txtTiempo.value = tiempo;
-      tiempo--;
-    }, 1000);
+    // let detenerConteo = setInterval(() => {
+    //   txtTiempo.value = tiempo;
+    //   tiempo--;
+    // }, 1000);
 
     // Tiempo para detener conteo
     setTimeout(() => {
       clearInterval(detenerConteo);
         estadoAlarma.style.background = 'red';
         estadoAlarma.textContent =  'Apagado';
-    }, tiempoParada);
+    }, tiempoParada+50);
+
+    let detenerConteo = setInterval(() => {
+      tiempo--;
+      txtTiempo.value = tiempo;
+    }, 1000);
+
   };
 
   // *************************************************
