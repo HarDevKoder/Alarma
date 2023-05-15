@@ -12,8 +12,8 @@ setTimeout(() => {
     estadoAlarma.textContent =  'Encendido';
 
     // Capturo el tiempo a contar
+    const tiempoParada=parseInt(txtTiempo.value)*1000;
     let tiempo = parseInt(txtTiempo.value);
-    const tiempoParada=(tiempo)*1000;
 
     conteoDescendente(tiempo, tiempoParada)
   };
@@ -35,8 +35,8 @@ setTimeout(() => {
   const conteoDescendente = (tiempo, tiempoParada) => {
     // Conteo Descendente (flag de detencion en variable)
     let detenerConteo = setInterval(() => {
-      tiempo--;
       txtTiempo.value = tiempo;
+      tiempo--;
     }, 1000);
 
     // Tiempo para detener conteo
