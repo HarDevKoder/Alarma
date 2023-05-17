@@ -33,12 +33,6 @@ setTimeout(() => {
   // Funcion para Contar descendentemente
   // *************************************************
   const conteoDescendente = (tiempo, tiempoParada) => {
-    // Conteo Descendente (flag de detencion en variable)
-    // let detenerConteo = setInterval(() => {
-    //   txtTiempo.value = tiempo;
-    //   tiempo--;
-    // }, 1000);
-
     // Tiempo para detener conteo
     setTimeout(() => {
       clearInterval(detenerConteo);
@@ -51,7 +45,14 @@ setTimeout(() => {
       txtTiempo.value = tiempo;
     }, 1000);
 
+    intervalId = detenerConteo
   };
+
+  const detenerContador = () => {
+    clearInterval(intervalId)
+    estadoAlarma.style.background = 'red';
+    estadoAlarma.textContent =  'Apagado';
+  }
 
   // *************************************************
   // ********   PROGRAMA PRINCIPAL   ********
@@ -60,11 +61,13 @@ setTimeout(() => {
   const txtTiempo = document.getElementById("txtTiempo");
   const btnActivar = document.getElementById("btnActivar");
   const estadoAlarma = document.getElementById("estadoAlarma");
+  const btnStop = document.getElementById("btnStop");
+  let intervalId = 0
   
   //Asigno Tecla enter al Boton
   asignarEnter();
   
   // Acciones al Presionar Boton
   btnActivar.addEventListener('click', presionarBoton);
-
+  btnStop.addEventListener('click', detenerContador);
 }, 1000);
