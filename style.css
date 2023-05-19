@@ -69,15 +69,16 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* Tamaño Mobile Landscape */
 @media only screen and (orientation: landscape) {
-  .container{
-    width: 60%;
+  .container {
+    min-width: 50%;
   }
 }
 
 /* Tamaño Tablet */
 @media (min-width: 600px) {
-  .container{
-    width: 30%;
+  .container {
+    max-width: 40%;
+    width: auto;
   }
 }
 
@@ -87,9 +88,5 @@ input[type="number"]::-webkit-outer-spin-button {
     max-width: 1200px;
     margin: 0 auto;
   }
-             
-  .container{
-    width: 30%;
-  }
 }
-             
+
