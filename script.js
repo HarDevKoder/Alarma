@@ -10,7 +10,7 @@ setTimeout(() => {
   txtTiempo.value=0;
   //Inicio Conteo
   btnStart.addEventListener("click", () => {
-    cuenta = parseInt(txtTiempo.value);
+    cuenta = parseInt(txtTiempo.value)||0;
     if(cuenta===0){
       alert('Ingresa Tiempo ');
     }else{
