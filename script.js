@@ -15,8 +15,9 @@ setTimeout(() => {
     resultados.style.background="green";
     cuenta = parseInt(txtTiempo.value);
     proceso = setInterval(() => {
-      txtTiempo.value = cuenta--;
-      if(cuenta < 0){
+      cuenta--;
+      txtTiempo.value = cuenta;
+      if(cuenta === 0){
         clearInterval(proceso);
         resultados.innerHTML="Conteo Finalizado";
         resultados.style.background="Red";
